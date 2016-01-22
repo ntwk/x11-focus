@@ -1,0 +1,41 @@
+X11-FOCUS
+
+Focus an X client window by number
+
+DESCRIPTION
+
+This is a small utility to focus a specific X window.  It is useful
+for window managers which do not provide such built-in functionality.
+It was originally intended for use with Openbox but it should work
+with any window manager.
+
+INSTALLATION
+
+Compile and install the resulting executable:
+
+  gcc -Wall -pedantic -o xfocus irssi-focus.c -lX11\
+      `pkg-config --cflags --libs glib-2.0` -O2 -fno-strict-aliasing
+
+  mv xfocus ~/bin
+
+If you are using Openbox, define the appropriate keybindings:
+
+  <keybind key="W-1">
+    <action name="execute">
+      <execute>xfocus 0</execute>
+    </action>
+  </keybind>
+  <keybind key="W-2">
+    <action name="execute">
+      <execute>xfocus 1</execute>
+    </action>
+  </keybind>
+
+And so on.
+
+CREDITS
+
+This program was found at http://openbox.org/dist/tools/irssi-focus.c
+as part of the Openbox website.
+
+See http://openbox.org/wiki/Help:IrssiStyleFocus for details.
