@@ -13,7 +13,7 @@ INSTALLATION
 
 Compile and install the resulting executable:
 
-  gcc -Wall -pedantic -o xfocus irssi-focus.c -lX11\
+  gcc -Wall -pedantic -o xfocus xfocus.c -lX11\
       `pkg-config --cflags --libs glib-2.0` -O2 -fno-strict-aliasing
 
   mv xfocus ~/bin
