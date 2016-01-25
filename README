@@ -13,10 +13,10 @@ INSTALLATION
 
 Compile and install the resulting executable:
 
-  gcc -Wall -pedantic -o xfocus xfocus.c -lX11\
-      `pkg-config --cflags --libs glib-2.0` -O2 -fno-strict-aliasing
+  make
+  make install
 
-  mv xfocus ~/bin
+The "make install" command will install the binary under $HOME/bin.
 
 If you are using Openbox, define the appropriate keybindings:
 

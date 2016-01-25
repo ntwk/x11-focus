@@ -1,5 +1,3 @@
-/* gcc -Wall -pedantic -o focus focus.c -lX11 `pkg-config --cflags --libs glib-2.0` -O2 -fno-strict-aliasing */
-
 #include <X11/Xlib.h>
 #include <glib.h> /* sorting, oh my */
 #include <stdlib.h>
