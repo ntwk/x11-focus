@@ -1,13 +1,21 @@
-X11-FOCUS
+XFOCUS
 
-Focus an X client window by number
+Focus an X client window
+
+SYNOPSIS
+
+  xfocus window_number
 
 DESCRIPTION
 
-This is a small utility to focus a specific X window.  It is useful
-for window managers which do not provide such built-in functionality.
-It was originally intended for use with Openbox but it should work
-with any window manager.
+Xfocus is a small utility which focuses an X window by referring to
+its number within an ordered list.  Window numbering begins at 0 and
+proceeds in top-down order.  Windows with equal vertical position are
+ordered from left to right.
+
+This program is useful for window managers which do not provide such
+built-in functionality.  It was originally intended for use with
+Openbox but it should work with any window manager.
 
 INSTALLATION
 
