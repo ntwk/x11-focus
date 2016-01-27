@@ -4,7 +4,7 @@ Focus an X client window
 
 SYNOPSIS
 
-  xfocus window_number
+    xfocus window_number
 
 DESCRIPTION
 
@@ -21,23 +21,23 @@ INSTALLATION
 
 Compile and install the resulting executable:
 
-  make
-  make install
+    make
+    make install
 
 The "make install" command will install the binary under $HOME/bin.
 
 If you are using Openbox, define the appropriate keybindings:
 
-  <keybind key="W-1">
-    <action name="execute">
-      <execute>xfocus 0</execute>
-    </action>
-  </keybind>
-  <keybind key="W-2">
-    <action name="execute">
-      <execute>xfocus 1</execute>
-    </action>
-  </keybind>
+    <keybind key="W-1">
+      <action name="execute">
+        <execute>xfocus 0</execute>
+      </action>
+    </keybind>
+    <keybind key="W-2">
+      <action name="execute">
+        <execute>xfocus 1</execute>
+      </action>
+    </keybind>
 
 And so on.
 
