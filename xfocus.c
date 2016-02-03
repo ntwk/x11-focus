@@ -31,7 +31,8 @@ long display_get_current_desktop(struct display * display) {
   long ret;
 
   if (XGetWindowProperty(display->display, display->root,
-                         XInternAtom(display->display, "_NET_CURRENT_DESKTOP", False),
+                         XInternAtom(display->display, "_NET_CURRENT_DESKTOP",
+                                     False),
                          0, 1, False, XA_CARDINAL, &actual_type_return,
                          &actual_format_return, &nitems_return,
                          &bytes_after_return,
@@ -57,7 +58,8 @@ long window_get_desktop(struct display * display, Window window) {
   long ret = 0;
 
   if (XGetWindowProperty(display->display, window,
-                         XInternAtom(display->display, "_NET_WM_DESKTOP", False),
+                         XInternAtom(display->display, "_NET_WM_DESKTOP",
+                                     False),
                          0, 1, False, XA_CARDINAL, &actual_type_return,
                          &actual_format_return, &nitems_return,
                          &bytes_after_return,
@@ -82,7 +84,8 @@ GArray * display_get_windows(struct display * display, long desktop) {
   GArray * array;
 
   if (XGetWindowProperty(display->display, display->root,
-                         XInternAtom(display->display, "_NET_CLIENT_LIST", False),
+                         XInternAtom(display->display, "_NET_CLIENT_LIST",
+                                     False),
                          0, 0x7fffffff, False, XA_WINDOW, &actual_type_return,
                          &actual_format_return, &nitems_return,
                          &bytes_after_return,
@@ -103,8 +106,8 @@ GArray * display_get_windows(struct display * display, long desktop) {
   return array;
 }
 
-void window_get_position(struct display * display, Window window, int position[2]) {
-
+void window_get_position(struct display * display, Window window,
+                         int position[2]) {
   Window child;
   XTranslateCoordinates(display->display, window, display->root, 0, 0,
                         position + 0, position + 1, &child);
