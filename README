@@ -9,9 +9,9 @@ SYNOPSIS
 DESCRIPTION
 
 xfocus focuses an X window.  A target window is referenced by number
-based on its relative position.  The top-left window is assigned
-window_number 0.  Window numbering proceeds in top-down order,
-including any unmapped windows.  Windows of equal vertical position
+based on its window coordinates.  The top-left window is assigned
+window_number 0.  Window numbering proceeds in top-down order, and
+includes any minimized windows.  Windows of equal vertical position
 are numbered from left to right.  A window's position is considered to
 be its top-left corner, excluding any window decorations drawn by the
 window manager.
